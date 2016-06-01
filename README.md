@@ -1,2 +1,2 @@
 # matching-game
-Clas
+Class Project Matching Game
