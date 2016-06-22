@@ -1,203 +1,188 @@
-<link rel="stylesheet" href="main.css"> 
+<html>
+<head>
+<link rel="stylesheet" href="main.css">
 <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="main.js"></script>
 
-<script src="js/jquery-1.12.0.min.js"></script> 
-<script src="js/main.js"></script> 
-<script>
-$(document).ready(function(){
-	$('.flip-container .flipper').click(function() {
-		$(this).toggleClass("turn");
-			if (".flip-container" === ".a") {
-				(".a").addClass(hide);
-			}
-	});
-});
-</script>
- 
 </head>
 
 <body>
-	
-    <h1>Matching Game</h1>
-	
+    <h1>A Memory Game</h1>
+    <h2 id="winner" class="hide">You Won!</h2>
+    <div class="section group">
+        <div class="col span_2_of_4">
+            <h3>Number of clicks: <span class="matches"></span></h3>
+        </div>
+        <div class="col span_2_of_4">
+            <input type="button" value="Start Over" onClick="window.location.reload()">
+        </div>
+    </div>
+    <div class="tester"></div>
     <div class="section group">
         <div class="col span_1_of_4">
-        	<div class="flip-container" class="a">
+            <div class="flip-container">
                 <div class="flipper">
                     <div class="front">
                         <span class="name"></span>
                     </div>
                     <div class="back">
+                        <div id="cat"></div>
                         <div class="back-logo"></div>
-                        <div class="back-title">BLALALA</div>
-                        <p>WORDSWORDSWORDS</p>
+                        <div class="back-title"></div>
                     </div>
                 </div>
             </div>
         </div>
-         <div class="col span_1_of_4">
-        	<div class="flip-container">
-                <div class="flipper">
-                    <div class="front">
-                        <span class="name"></span>
-                    </div>
-                    <div class="back">
-                        <div class="back-logo"></div>
-                        <div class="back-title">BLALALA</div>
-                        <p>WORDSWORDSWORDS</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-         <div class="col span_1_of_4">
-        	<div class="flip-container" class="a">
-                <div class="flipper">
-                    <div class="front">
-                        <span class="name"></span>
-                    </div>
-                    <div class="back">
-                        <div class="back-logo"></div>
-                        <div class="back-title">BLALALA</div>
-                        <p>WORDSWORDSWORDS</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-         <div class="col span_1_of_4">
-        	<div class="flip-container">
-                <div class="flipper">
-                    <div class="front">
-                        <span class="name"></span>
-                    </div>
-                    <div class="back">
-                        <div class="back-logo"></div>
-                        <div class="back-title">BLALALA</div>
-                        <p>WORDSWORDSWORDS</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-	</div>
-	
-	    <div class="section group">
         <div class="col span_1_of_4">
-        	<div class="flip-container">
+            <div class="flip-container">
                 <div class="flipper">
                     <div class="front">
                         <span class="name"></span>
                     </div>
                     <div class="back">
                         <div class="back-logo"></div>
-                        <div class="back-title">BLALALA</div>
-                        <p>WORDSWORDSWORDS</p>
+                        <div class="back-title"></div>
                     </div>
                 </div>
             </div>
         </div>
-         <div class="col span_1_of_4">
-        	<div class="flip-container">
-                <div class="flipper">
-                    <div class="front">
-                        <span class="name"></span>
-                    </div>
-                    <div class="back">
-                        <div class="back-logo"></div>
-                        <div class="back-title">BLALALA</div>
-                        <p>WORDSWORDSWORDS</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-         <div class="col span_1_of_4">
-        	<div class="flip-container">
-                <div class="flipper">
-                    <div class="front">
-                        <span class="name"></span>
-                    </div>
-                    <div class="back">
-                        <div class="back-logo"></div>
-                        <div class="back-title">BLALALA</div>
-                        <p>WORDSWORDSWORDS</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-         <div class="col span_1_of_4">
-        	<div class="flip-container">
-                <div class="flipper">
-                    <div class="front">
-                        <span class="name"></span>
-                    </div>
-                    <div class="back">
-                        <div class="back-logo"></div>
-                        <div class="back-title">BLALALA</div>
-                        <p>WORDSWORDSWORDS</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-	</div>
-
-	    <div class="section group">
         <div class="col span_1_of_4">
-        	<div class="flip-container">
+            <div class="flip-container" class="a">
                 <div class="flipper">
                     <div class="front">
                         <span class="name"></span>
                     </div>
                     <div class="back">
                         <div class="back-logo"></div>
-                        <div class="back-title">BLALALA</div>
-                        <p>WORDSWORDSWORDS</p>
+                        <div class="back-title"></div>
                     </div>
                 </div>
             </div>
         </div>
-         <div class="col span_1_of_4">
-        	<div class="flip-container">
+        <div class="col span_1_of_4">
+            <div class="flip-container">
                 <div class="flipper">
                     <div class="front">
                         <span class="name"></span>
                     </div>
                     <div class="back">
                         <div class="back-logo"></div>
-                        <div class="back-title">BLALALA</div>
-                        <p>WORDSWORDSWORDS</p>
+                        <div class="back-title"></div>
                     </div>
                 </div>
             </div>
         </div>
-         <div class="col span_1_of_4">
-        	<div class="flip-container">
+    </div>
+    <div class="section group">
+        <div class="col span_1_of_4">
+            <div class="flip-container">
                 <div class="flipper">
                     <div class="front">
                         <span class="name"></span>
                     </div>
                     <div class="back">
                         <div class="back-logo"></div>
-                        <div class="back-title">BLALALA</div>
-                        <p>WORDSWORDSWORDS</p>
+                        <div class="back-title"></div>
                     </div>
                 </div>
             </div>
         </div>
-         <div class="col span_1_of_4">
-        	<div class="flip-container">
+        <div class="col span_1_of_4">
+            <div class="flip-container">
                 <div class="flipper">
                     <div class="front">
                         <span class="name"></span>
                     </div>
                     <div class="back">
                         <div class="back-logo"></div>
-                        <div class="back-title">BLALALA</div>
-                        <p>WORDSWORDSWORDS</p>
+                        <div class="back-title"></div>
                     </div>
                 </div>
             </div>
         </div>
-	</div> 
-
-
+        <div class="col span_1_of_4">
+            <div class="flip-container">
+                <div class="flipper">
+                    <div class="front">
+                        <span class="name"></span>
+                    </div>
+                    <div class="back">
+                        <div class="back-logo"></div>
+                        <div class="back-title"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col span_1_of_4">
+            <div class="flip-container">
+                <div class="flipper">
+                    <div class="front">
+                        <span class="name"></span>
+                    </div>
+                    <div class="back">
+                        <div class="back-logo"></div>
+                        <div class="back-title"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section group">
+        <div class="col span_1_of_4">
+            <div class="flip-container">
+                <div class="flipper">
+                    <div class="front">
+                        <span class="name"></span>
+                    </div>
+                    <div class="back">
+                        <div class="back-logo"></div>
+                        <div class="back-title"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col span_1_of_4">
+            <div class="flip-container">
+                <div class="flipper">
+                    <div class="front">
+                        <span class="name"></span>
+                    </div>
+                    <div class="back">
+                        <div class="back-logo"></div>
+                        <div class="back-title"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col span_1_of_4">
+            <div class="flip-container">
+                <div class="flipper">
+                    <div class="front">
+                        <span class="name"></span>
+                    </div>
+                    <div class="back">
+                        <div class="back-logo"></div>
+                        <div class="back-title"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col span_1_of_4">
+            <div class="flip-container">
+                <div class="flipper">
+                    <div class="front">
+                        <span class="name"></span>
+                    </div>
+                    <div class="back">
+                        <div class="back-logo"></div>
+                        <div class="back-title"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
+
 </html>
