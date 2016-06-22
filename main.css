@@ -61,7 +61,70 @@ h1 {
 	font-size: 5em;
 	text-align: center;
 	padding-bottom: 0;
+	margin: 0;
+	margin-bottom: 10px;
+}
+
+h2 {
+	font-family: 'Shadows Into Light', cursive;
+	font-size: 5em;
+	text-align: center;
+	padding-bottom: 0;
+	margin-bottom: 10px;
+}
+h3 {
+	font-family: 'Shadows Into Light', cursive;
+	font-size: 2em;
+	text-align: right;
+	padding-bottom: 0;
 	margin-bottom: 20px;
+	margin: 0;
+	padding-right: 15px;
+}
+input[type=button] {
+	margin-top: 10px;
+	padding-left: 15px;
+}
+input[type=button] {
+	-moz-box-shadow:inset 0px 1px 0px 0px #f5978e;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #f5978e;
+	box-shadow:inset 0px 1px 0px 0px #f5978e;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f24537), color-stop(1, #c62d1f));
+	background:-moz-linear-gradient(top, #f24537 5%, #c62d1f 100%);
+	background:-webkit-linear-gradient(top, #f24537 5%, #c62d1f 100%);
+	background:-o-linear-gradient(top, #f24537 5%, #c62d1f 100%);
+	background:-ms-linear-gradient(top, #f24537 5%, #c62d1f 100%);
+	background:linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f24537', endColorstr='#c62d1f',GradientType=0);
+	background-color:#f24537;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #d02718;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #810e05;
+}
+input[type=button]:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #c62d1f), color-stop(1, #f24537));
+	background:-moz-linear-gradient(top, #c62d1f 5%, #f24537 100%);
+	background:-webkit-linear-gradient(top, #c62d1f 5%, #f24537 100%);
+	background:-o-linear-gradient(top, #c62d1f 5%, #f24537 100%);
+	background:-ms-linear-gradient(top, #c62d1f 5%, #f24537 100%);
+	background:linear-gradient(to bottom, #c62d1f 5%, #f24537 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c62d1f', endColorstr='#f24537',GradientType=0);
+	background-color:#c62d1f;
+}
+input[type=button]:active {
+	position:relative;
+	top:1px;
+
 }
 /* entire container, keeps perspective */
 .flip-container {
@@ -87,16 +150,14 @@ h1 {
 
 /* flip speed goes here */
 .flipper {
-	transition: 0.6s;
+	transition: transform 0.6s;
 	transform-style: preserve-3d;
-
 	position: relative;
 }
 
 /* hide back of pane during swap */
 .front, .back {
 	backface-visibility: hidden;
-
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -107,12 +168,40 @@ h1 {
 	z-index: 2;
 	/* for firefox 31 */
 	transform: rotateY(0deg);
-	background-color: #933;
+	background-color: #000;
+	background-image: url(../images/bg.jpg);
+	background-image: cover;
+	background-size: 100%;
+	box-shadow: 5px 5px 10px #ccc;
+	background-position: center;
 }
 
 /* back, initially hidden pane */
 .back {
 	transform: rotateY(180deg);
-	background-color: #999;
+	background-color: #f1f1f1;
 }
-
+.back-logo img {
+   vertical-align: middle;
+   max-height: 150px;
+   max-width: 200px;
+   display: block;
+   margin:0 auto;
+   background-image: cover;
+   background-size: 100%;
+   position: center;
+}
+.back-title img {
+	width:  50%;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	height: auto;
+	margin: 0 auto;
+	display: block;
+	float: left;
+}
+.back-title {
+	font-size: 2em;
+	color: rgba(204,204,204, .8);
+	text-align: center;
+}
